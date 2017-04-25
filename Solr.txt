@@ -1,0 +1,2 @@
+rake jetty:start
+rails server -b $IP -p $PORT

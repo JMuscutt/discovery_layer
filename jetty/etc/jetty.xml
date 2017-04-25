@@ -74,16 +74,7 @@
         <Set name="handlers">
          <Array type="org.eclipse.jetty.server.Handler">
            <Item>
-
-             <!-- Solr access limitations -->
-             <New class="org.eclipse.jetty.server.handler.IPAccessHandler">
-               <Call name="addWhite">
-                 <Arg>127.0.0.1</Arg>
-               </Call>
-               <Set name="handler">
-                 <New id="Contexts" class="org.eclipse.jetty.server.handler.ContextHandlerCollection"/>
-              </Set>
-            </New>
+             <New id="Contexts" class="org.eclipse.jetty.server.handler.ContextHandlerCollection"/>
            </Item>
            <Item>
              <New id="DefaultHandler" class="org.eclipse.jetty.server.handler.DefaultHandler"/>
