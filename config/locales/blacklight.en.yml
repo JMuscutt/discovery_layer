@@ -7,3 +7,6 @@ en:
     more_solr_results: 'More books and media'
     solr_results_label: 'Books and media'
     solr_results_description: 'E-books, streaming video and music, library books and more'
+    email:
+      text:
+        message: "Follow this link to go to find your book: https://libcat.linnbenton.edu/eg/opac/place_hold?hold_target="
