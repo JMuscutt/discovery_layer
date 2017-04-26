@@ -1,6 +1,14 @@
 <% @documents.each do |document| %>
 <%= document.to_email_text %>
+<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+<%= puts document['eg_tcn_t'] %>
+<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
+<%= puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" %>
 <%= t('blacklight.email.text.url', :url =>polymorphic_url(document, @url_gen_params)) %>
 <%= t('blacklight.email.text.message', :message => @message ) -%>
-<%= document['eg_tcn_t'] %>
+<%= document['eg_tcn_t'].first -%>
+<%= t('blacklight.email.text.urlend', :urlend => @urlend ) %>
 <% end %>

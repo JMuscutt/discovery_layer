@@ -10,3 +10,4 @@ en:
     email:
       text:
         message: "Follow this link to go to find your book: https://libcat.linnbenton.edu/eg/opac/place_hold?hold_target="
+        urlend: "&hold_type=T"
