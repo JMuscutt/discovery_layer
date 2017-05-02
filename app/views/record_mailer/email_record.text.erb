@@ -5,12 +5,6 @@
 <%# Extracts TCN and adds it onto the URL to reserve page %>
 <%= document['eg_tcn_t'].first -%>
 <%= t('blacklight.email.text.urlend', :urlend => @urlend ) %>
-<%= mode_of_access document %>
- <%= if document.has? 'eg_tcn_t' %>
-   <%= 'library_holdings' %>
- <%= elsif document.has? 'url_fulltext_display' %>
-   <%= 'url' %>
- <%= else %>
-   <%= nil %>
 <% end %>
 
+kajfkafjsd
