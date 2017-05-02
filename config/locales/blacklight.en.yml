@@ -9,5 +9,6 @@ en:
     solr_results_description: 'E-books, streaming video and music, library books and more'
     email:
       text:
-        message: "Follow this link to go to find your book: https://libcat.linnbenton.edu/eg/opac/place_hold?hold_target="
+        bookmessage: "Follow this link to go to reserve your book: https://libcat.linnbenton.edu/eg/opac/place_hold?hold_target="
         urlend: "&hold_type=T"
+        urlmessage: "Follow this link to access this online resource: "

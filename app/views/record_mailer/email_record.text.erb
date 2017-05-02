@@ -1,10 +1,18 @@
 <% @documents.each do |document| %>
 <%= document.to_email_text %>
 <%= t('blacklight.email.text.url', :url =>polymorphic_url(document, @url_gen_params)) %>
-<%= t('blacklight.email.text.message', :message => @message ) -%>
+<%#= t('blacklight.email.text.message', :message => @message ) -%>
 <%# Extracts TCN and adds it onto the URL to reserve page %>
+<%#= document['eg_tcn_t'].first -%>
+<% if document['eg_tcn_t'] != nil %>
+<%= t('blacklight.email.text.bookmessage', :bookmessage => @bookmessage ) -%>
 <%= document['eg_tcn_t'].first -%>
 <%= t('blacklight.email.text.urlend', :urlend => @urlend ) %>
+<% elsif document['url_fulltext_display'] %>
+<%= t('blacklight.email.text.urlmessage', :urlmessage => @urlmessage ) -%>
+<%= document['url_fulltext_display'].first %>
+<% else %>
+Speak with a librarian to find out how to access this resource.
 <% end %>
-
-kajfkafjsd
+<%#= t('blacklight.email.text.urlend', :urlend => @urlend ) %>
+<% end %>
