@@ -1,9 +1,7 @@
 <% @documents.each do |document| %>
 <%= document.to_email_text %>
 <%= t('blacklight.email.text.url', :url =>polymorphic_url(document, @url_gen_params)) %>
-<%#= t('blacklight.email.text.message', :message => @message ) -%>
-<%# Extracts TCN and adds it onto the URL to reserve page %>
-<%#= document['eg_tcn_t'].first -%>
+<%# Logic to determine if resource is a book or online, displays appropriate link, or if you need to talk to a librarian %>
 <% if document['eg_tcn_t'] != nil %>
 <%= t('blacklight.email.text.bookmessage', :bookmessage => @bookmessage ) -%>
 <%= document['eg_tcn_t'].first -%>
@@ -14,5 +12,4 @@
 <% else %>
 Speak with a librarian to find out how to access this resource.
 <% end %>
-<%#= t('blacklight.email.text.urlend', :urlend => @urlend ) %>
 <% end %>

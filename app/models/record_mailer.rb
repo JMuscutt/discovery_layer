@@ -19,9 +19,5 @@ class RecordMailer < ActionMailer::Base
     @url_gen_params = url_gen_params
     mail(:to => details[:to], :subject => "LBCC Library item", :from => 'libref@linnbenton.edu')
   end
-  
-  def display_fulltext_access_link url
-        return link_to('Access this resource', URI.encode(url))
-  end
 
 end
